@@ -8,11 +8,10 @@ const refs = {
     countTimer: document.querySelector("#countdown"),
   };
 
-   let targetDate = new Date('Jul 17, 2019');
-   const time = targetDate - new Date;
+   const targetDate = new Date('Jul 17, 2023');
   
   function timer() {
-    result = time;
+    const time = targetDate - new Date();
     seconds = Math.floor((time % (1000 * 60)) / 1000);
     minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
     hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -25,14 +24,12 @@ const refs = {
   }
   
   let watchId = null;
-  let result = null;
   let seconds = null;
   let minutes = null;
   let hours = null;
   let days = null;
   
   function startWatch() {
-    targetDate;
     watchId = setInterval(timer, 1000);
   }
 
