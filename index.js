@@ -1,18 +1,6 @@
-const refs = {
-     startBtn: document.querySelector("#start"),
-     stopBtn: document.querySelector("#stop"),
-}
+new CountdownTimer({
+    selector: '#timer-1',
+    targetDate: new Date('Jul 17, 2019'),
+  });
 
-let watch = null;
-let startDate = 
-
-function startWatch() {
-    watch = setInterval(() => {}, 1000)
-}
-
-function stopWatch() {
-   clearInterval(watch);
-}
-
-refs.startBtn.addEventListener("click", startWatch);
-refs.stopBtn.addEventListener("click", stopWatch);
+  

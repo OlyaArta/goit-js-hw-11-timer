@@ -10,40 +10,28 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div class="modal animate__animated">
-        <h1 class="chat">Super chat</h1>
-    </div>
-    <header></header>
-    <section>
-        <div class="wrapper">
-            <hgroup>
-                <h1>Stopwatch</h1>
-            </hgroup>
-            <div id="countdown">
-                <div class="cd-box">
-                    <p class="numbers days">11</p><br>
-                    <p class="strings timeRefDays">Days</p>
-                </div>
-                <div class="cd-box">
-                    <p class="numbers hours">11</p><br>
-                    <p class="strings timeRefHours">Hours</p>
-                </div>
-                <div class="cd-box">
-                    <p class="numbers minutes">11</p><br>
-                    <p class="strings timeRefMinutes">Minutes</p>
-                </div>
-                <div class="cd-box">
-                    <p class="numbers seconds">11</p><br>
-                    <p class="strings timeRefSeconds">Seconds</p>
-                </div>
-            </div>
-            <div class="btns-container">
-                <button class="btn" id='start'>Start</button>
-                <button class="btn" id='stop'>Stop</button>
-            </div>
+<body class="CountdownTimer">
+    <div class="timer" id="timer-1">
+        <div class="field">
+          <span class="value" data-value="days">11</span>
+          <span class="label">Days</span>
         </div>
-    </section>
+      
+        <div class="field">
+          <span class="value" data-value="hours">11</span>
+          <span class="label">Hours</span>
+        </div>
+      
+        <div class="field">
+          <span class="value" data-value="mins">11</span>
+          <span class="label">Minutes</span>
+        </div>
+      
+        <div class="field">
+          <span class="value" data-value="secs">11</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
     <script src="./index.js"></script>
 </body>
 
