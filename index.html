@@ -10,28 +10,40 @@
     <title>Document</title>
 </head>
 
-<body class="CountdownTimer">
-    <div class="timer" id="timer-1">
-        <div class="field">
-          <span class="value" data-value="days">11</span>
-          <span class="label">Days</span>
+<body>
+    <div class="modal animate__animated">
+        <h1 class="chat">Super chat</h1>
+    </div>
+    <header></header>
+    <section>
+        <div class="wrapper">
+            <hgroup>
+                <h1>Timer</h1>
+            </hgroup>
+            <div class="CountdownTimer" id="countdown">
+                <div class="cd-box">
+                    <p class="numbers days">00</p><br>
+                    <p class="strings timeRefDays">Days</p>
+                </div>
+                <div class="cd-box">
+                    <p class="numbers hours">00</p><br>
+                    <p class="strings timeRefHours">Hours</p>
+                </div>
+                <div class="cd-box">
+                    <p class="numbers minutes">00</p><br>
+                    <p class="strings timeRefMinutes">Minutes</p>
+                </div>
+                <div class="cd-box">
+                    <p class="numbers seconds">00</p><br>
+                    <p class="strings timeRefSeconds">Seconds</p>
+                </div>
+            </div>
+            <div class="btns-container">
+                <button class="btn" id='start'>Start</button>
+                <button class="btn" id='stop'>Stop</button>
+            </div>
         </div>
-      
-        <div class="field">
-          <span class="value" data-value="hours">11</span>
-          <span class="label">Hours</span>
-        </div>
-      
-        <div class="field">
-          <span class="value" data-value="mins">11</span>
-          <span class="label">Minutes</span>
-        </div>
-      
-        <div class="field">
-          <span class="value" data-value="secs">11</span>
-          <span class="label">Seconds</span>
-        </div>
-      </div>
+    </section>
     <script src="./index.js"></script>
 </body>
 

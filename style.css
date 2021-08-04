@@ -37,18 +37,13 @@
     transition: 0.2s;
     color: #ff5722;
   }
-  /* page layout */
-  /* header */
+  
   header {
     width: 100%;
     height: 60%;
     background: #607d8b;
   }
-  /* section */
-  /* /* section{
-      width: 100%;
-      height: 50%;
-  } */
+ 
   section h1,
   section p.meta {
     color: #ffffff;
@@ -68,7 +63,6 @@
     font-size: 4.5em;
   }
   
-  /* countdown styles */
   div#countdown {
     color: #353535;
   }
@@ -102,7 +96,7 @@
     -moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
     box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
   }
-  
+
   .btn {
     margin-top: 20px;
     padding: 15px 30px;
