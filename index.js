@@ -1,4 +1,6 @@
-const refs = {
+//////////////////////// Variant1 ///////////////////////////
+
+/* const refs = {
     startBtn: document.querySelector("#start"),
     stopBtn: document.querySelector("#stop"),
     secondsText: document.querySelector(".seconds"),
@@ -6,9 +8,9 @@ const refs = {
     hoursText: document.querySelector(".hours"),
     daysText: document.querySelector(".days"),
     countTimer: document.querySelector("#countdown"),
-  };
+  }; 
 
-   const targetDate = new Date('Jul 17, 2023');
+    const targetDate = new Date('Jul 17, 2023');
   
   function timer() {
     const time = targetDate - new Date();
@@ -38,6 +40,58 @@ function stopWatch() {
   }
 
 refs.startBtn.addEventListener("click", startWatch);
-refs.stopBtn.addEventListener("click", stopWatch);
+refs.stopBtn.addEventListener("click", stopWatch); */
 
+//////////////////////// Variant2 //////////////////////////
+
+//class CountdownTimer({
+//  selector: '#timer-1',
+//  targetDate: new Date('Jul 17, 2019'),
+//});
+
+/*class countdownTimer {
+  constructor() {
+    this.watchId = null;
+    this.targetDate = new Date('Jul 17, 2023');
+    this.startBtn = document.querySelector("#start");
+    this.stopBtn = document.querySelector("#stop");
+    this.seconds = document.querySelector(".seconds");
+    this.minutes = document.querySelector(".minutes");
+    this.hours = document.querySelector(".hours");
+    this.days = document.querySelector(".days");
+
+    this.action = this.action.bind(this);
+    this.startWatch = this.startWatch.bind(this);
+    this.stopWatch = this.stopWatch.bind(this);
+  }
+
+  action() {
+    const time = this.targetDate - new Date();
+    const seconds = Math.floor((time % (1000 * 60)) / 1000);
+    const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+    const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+
+    this.seconds.textContent = seconds;
+    this.minutes.textContent = minutes;
+    this.hours.textContent = hours;
+    this.days.textContent = days;
+  }
+
+  startWatch() {
+    this.watchId = setInterval(this.action, 1000);
+  }
+
+  stopWatch() {
+    clearInterval(this.watchId);
+  }
+
+  init() {
+    this.startBtn.addEventListener("click", this.startWatch);
+    this.stopBtn.addEventListener("click", this.stopWatch);
+  }
+}
+
+const watch = new countdownTimer();
+watch.init(); */
 
