@@ -1,6 +1,6 @@
 //////////////////////// Variant1 ///////////////////////////
 
-/* const refs = {
+ const refs = {
     startBtn: document.querySelector("#start"),
     stopBtn: document.querySelector("#stop"),
     secondsText: document.querySelector(".seconds"),
@@ -40,7 +40,7 @@ function stopWatch() {
   }
 
 refs.startBtn.addEventListener("click", startWatch);
-refs.stopBtn.addEventListener("click", stopWatch); */
+refs.stopBtn.addEventListener("click", stopWatch); 
 
 //////////////////////// Variant2 //////////////////////////
 
