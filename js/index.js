@@ -1,4 +1,5 @@
-//////////////////////// Variant1 ///////////////////////////
+//////////////////////// Variant1 ////////////////////
+      //// запуск таймера после загрузки браузера ///////////////////////////
 
  const refs = {
     startBtn: document.querySelector("#start"),
@@ -19,10 +20,10 @@
     hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     days = Math.floor(time / (1000 * 60 * 60 * 24));
 
-    refs.secondsText.textContent = seconds;
-    refs.minutesText.textContent = minutes;
-    refs.hoursText.textContent = hours;
-    refs.daysText.textContent = days;
+    refs.secondsText.textContent = seconds < 10 ? `0${seconds}` : seconds;
+    refs.minutesText.textContent = minutes < 10 ? `0${minutes}` : minutes;
+    refs.hoursText.textContent = hours < 10 ? `0${hours}` : hours;
+    refs.daysText.textContent = days < 10 ? `0${days}` : days;
   }
   
   let watchId = null;
@@ -39,15 +40,12 @@ function stopWatch() {
     clearInterval(watchId);
   }
 
-refs.startBtn.addEventListener("click", startWatch);
-refs.stopBtn.addEventListener("click", stopWatch); 
+document.addEventListener("DOMContentLoaded", startWatch);
+//refs.startBtn.addEventListener("click", startWatch);
+//refs.stopBtn.addEventListener("click", stopWatch); 
 
-//////////////////////// Variant2 //////////////////////////
-
-//class CountdownTimer({
-//  selector: '#timer-1',
-//  targetDate: new Date('Jul 17, 2019'),
-//});
+//////////////////////// Variant2 /////////////////////
+ ////// запуск таймера кнопками старт и стоп//////////////////////////
 
 /*class countdownTimer {
   constructor() {
@@ -72,10 +70,10 @@ refs.stopBtn.addEventListener("click", stopWatch);
     const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const days = Math.floor(time / (1000 * 60 * 60 * 24));
 
-    this.seconds.textContent = seconds;
-    this.minutes.textContent = minutes;
-    this.hours.textContent = hours;
-    this.days.textContent = days;
+    this.seconds.textContent = seconds < 10 ? `0${seconds}` : seconds;
+    this.minutes.textContent = minutes < 10 ? `0${minutes}` : minutes;
+    this.hours.textContent = hours < 10 ? `0${hours}` : hours;
+    this.days.textContent = days < 10 ? `0${days}` : days;
   }
 
   startWatch() {
@@ -87,8 +85,8 @@ refs.stopBtn.addEventListener("click", stopWatch);
   }
 
   init() {
-    this.startBtn.addEventListener("click", this.startWatch);
-    this.stopBtn.addEventListener("click", this.stopWatch);
+   this.startBtn.addEventListener("click", this.startWatch);
+   this.stopBtn.addEventListener("click", this.stopWatch);
   }
 }
 
