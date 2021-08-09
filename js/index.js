@@ -1,7 +1,7 @@
 //////////////////////// Variant1 ////////////////////
       //// запуск таймера после загрузки браузера ///////////////////////////
 
- const refs = {
+/* const refs = {
     startBtn: document.querySelector("#start"),
     stopBtn: document.querySelector("#stop"),
     secondsText: document.querySelector(".seconds"),
@@ -42,12 +42,12 @@ function stopWatch() {
 
 document.addEventListener("DOMContentLoaded", startWatch);
 //refs.startBtn.addEventListener("click", startWatch);
-//refs.stopBtn.addEventListener("click", stopWatch); 
+//refs.stopBtn.addEventListener("click", stopWatch); */
 
 //////////////////////// Variant2 /////////////////////
  ////// запуск таймера кнопками старт и стоп//////////////////////////
 
-/*class countdownTimer {
+class countdownTimer {
   constructor() {
     this.watchId = null;
     this.targetDate = new Date('Jul 17, 2023');
@@ -91,5 +91,5 @@ document.addEventListener("DOMContentLoaded", startWatch);
 }
 
 const watch = new countdownTimer();
-watch.init(); */
+watch.init(); 
 
