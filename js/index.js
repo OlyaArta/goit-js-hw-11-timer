@@ -85,8 +85,9 @@ class countdownTimer {
   }
 
   init() {
-   this.startBtn.addEventListener("click", this.startWatch);
-   this.stopBtn.addEventListener("click", this.stopWatch);
+    document.addEventListener("DOMContentLoaded", this.startWatch);
+  // this.startBtn.addEventListener("click", this.startWatch);
+  // this.stopBtn.addEventListener("click", this.stopWatch);
   }
 }
 
