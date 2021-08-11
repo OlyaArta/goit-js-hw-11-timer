@@ -48,49 +48,66 @@ document.addEventListener("DOMContentLoaded", startWatch);
  ////// запуск таймера кнопками старт и стоп//////////////////////////
 
 class countdownTimer {
-  constructor() {
+  constructor({selector, targetDate}) {
     this.watchId = null;
-    this.targetDate = new Date('Jul 17, 2023');
-    this.startBtn = document.querySelector("#start");
-    this.stopBtn = document.querySelector("#stop");
-    this.seconds = document.querySelector(".seconds");
-    this.minutes = document.querySelector(".minutes");
-    this.hours = document.querySelector(".hours");
-    this.days = document.querySelector(".days");
+    this.selector = selector;
+    this.targetDate = targetDate;
+    this.startWatch();
+   // this.targetDate = new Date('Jul 17, 2023');
+    //this.startBtn = document.querySelector("#start");
+    //this.stopBtn = document.querySelector("#stop");
+    this.second = document.querySelector(".seconds");
+    this.minute = document.querySelector(".minutes");
+    this.hour = document.querySelector(".hours");
+    this.day = document.querySelector(".days");
 
-    this.action = this.action.bind(this);
-    this.startWatch = this.startWatch.bind(this);
-    this.stopWatch = this.stopWatch.bind(this);
+  //  this.action = this.action.bind(this);
+  //  this.startWatch = this.startWatch.bind(this);
+  //  this.stopWatch = this.stopWatch.bind(this);
   }
 
-  action() {
-    const time = this.targetDate - new Date();
+  action(time) {
+  //  const time = this.targetDate - new Date();
     const seconds = Math.floor((time % (1000 * 60)) / 1000);
     const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
     const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const days = Math.floor(time / (1000 * 60 * 60 * 24));
 
-    this.seconds.textContent = seconds < 10 ? `0${seconds}` : seconds;
-    this.minutes.textContent = minutes < 10 ? `0${minutes}` : minutes;
-    this.hours.textContent = hours < 10 ? `0${hours}` : hours;
-    this.days.textContent = days < 10 ? `0${days}` : days;
+    return {days, hours, minutes, seconds}
+  }
+
+  timerScreen({days, hours, minutes, seconds}) {
+    this.second.textContent = seconds < 10 ? `0${seconds}` : seconds;
+    this.minute.textContent = minutes < 10 ? `0${minutes}` : minutes;
+    this.hour.textContent = hours < 10 ? `0${hours}` : hours;
+    this.day.textContent = days < 10 ? `0${days}` : days;
   }
 
   startWatch() {
-    this.watchId = setInterval(this.action, 1000);
+    const selectorTime = document.querySelector(this.selector);
+    const startTime = this.targetDate.getTime();
+    this.watchId = setInterval(() => {
+      const presentTime = Date.now();
+      const timeCount = startTime - presentTime;
+      const {days, hours, minutes, seconds} = this.action(timeCount);
+      this.timerScreen({days, hours, minutes, seconds});
+    }, 1000);
   }
 
-  stopWatch() {
+ /* stopWatch() {
     clearInterval(this.watchId);
-  }
+  }*/
 
-  init() {
-    document.addEventListener("DOMContentLoaded", this.startWatch);
+//  init() {
+//    document.addEventListener("DOMContentLoaded", this.startWatch);
   // this.startBtn.addEventListener("click", this.startWatch);
   // this.stopBtn.addEventListener("click", this.stopWatch);
-  }
+ // }
 }
 
-const watch = new countdownTimer();
-watch.init(); 
+const watch = new countdownTimer({
+  selector: '#countdown',
+  targetDate: new Date('Jul 17, 2023'),
+});
+//watch.init(); 
 
