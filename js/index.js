@@ -104,12 +104,12 @@ class countdownTimer {
  // }
 }
 
-/*const watch = new countdownTimer({
+const watch = new countdownTimer({
   selector: '#countdown',
   targetDate: new Date('Jul 17, 2023'),
-});*/
+});
 //watch.init(); 
-const watch = new countdownTimer({
+const watchTimer = new countdownTimer({
   selector: '#countdown-1',
   targetDate: new Date('Jul 19, 2022'),
 });
