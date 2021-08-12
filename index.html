@@ -22,37 +22,19 @@
             </hgroup>
             <div class="CountdownTimer" id="countdown">
                 <div class="cd-box">
-                    <p class="numbers days">00</p><br>
+                    <p class="numbers" data-value="days">00</p><br>
                     <p class="strings timeRefDays">Days</p>
                 </div>
                 <div class="cd-box">
-                    <p class="numbers hours">00</p><br>
+                    <p class="numbers" data-value="hours">00</p><br>
                     <p class="strings timeRefHours">Hours</p>
                 </div>
                 <div class="cd-box">
-                    <p class="numbers minutes">00</p><br>
+                    <p class="numbers" data-value="minutes">00</p><br>
                     <p class="strings timeRefMinutes">Minutes</p>
                 </div>
                 <div class="cd-box">
-                    <p class="numbers seconds">00</p><br>
-                    <p class="strings timeRefSeconds">Seconds</p>
-                </div>
-            </div>
-            <div class="CountdownTimer" id="countdown-1">
-                <div class="cd-box">
-                    <p class="numbers days">00</p><br>
-                    <p class="strings timeRefDays">Days</p>
-                </div>
-                <div class="cd-box">
-                    <p class="numbers hours">00</p><br>
-                    <p class="strings timeRefHours">Hours</p>
-                </div>
-                <div class="cd-box">
-                    <p class="numbers minutes">00</p><br>
-                    <p class="strings timeRefMinutes">Minutes</p>
-                </div>
-                <div class="cd-box">
-                    <p class="numbers seconds">00</p><br>
+                    <p class="numbers" data-value="seconds">00</p><br>
                     <p class="strings timeRefSeconds">Seconds</p>
                 </div>
             </div>
@@ -60,6 +42,24 @@
                 <button class="btn" id='start'>Start</button>
                 <button class="btn" id='stop'>Stop</button>
             </div>
+            <div class="CountdownTimer" id="countdown-1">
+                <div class="cd-box">
+                    <p class="numbers" data-value="days">00</p><br>
+                    <p class="strings timeRefDays">Days</p>
+                </div>
+                <div class="cd-box">
+                    <p class="numbers" data-value="hours">00</p><br>
+                    <p class="strings timeRefHours">Hours</p>
+                </div>
+                <div class="cd-box">
+                    <p class="numbers" data-value="minutes">00</p><br>
+                    <p class="strings timeRefMinutes">Minutes</p>
+                </div>
+                <div class="cd-box">
+                    <p class="numbers" data-value="seconds">00</p><br>
+                    <p class="strings timeRefSeconds">Seconds</p>
+                </div>
+            </div>   
         </div>
     </section>
     <script src="./js/index.js"></script>
